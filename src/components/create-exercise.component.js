@@ -24,7 +24,7 @@ class CreateExercises extends Component {
     }
 
     componentDidMount() {
-       axios.get('http://localhost:5000/users/')
+        axios.get('https://quick-fix-service.herokuapp.com/users/')
            .then(response => {
                if (response.data.length > 0) {
                    this.setState({
@@ -70,7 +70,7 @@ class CreateExercises extends Component {
 
         console.log(exercise);
 
-        axios.post('http://localhost:5000/exercises/add', exercise)
+        axios.post('https://quick-fix-service.herokuapp.com/exercises/add', exercise)
             .then(response => console.log(response.data));
         // take the person back to home page,
         // which is a list of exercises
